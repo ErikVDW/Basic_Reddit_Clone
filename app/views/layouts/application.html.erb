@@ -8,10 +8,8 @@
 </head>
 <body>
   <% flash.each do | name, msg | %>
-    <%= content_tag( :div, msg, class: "alert alert-#{name}" ) %>
+    <%= content_tag( :div, msg, class: "flash", id: "#{name}" ) %>
   <% end %>
-  <p class="notice"><%= flash.notice %></p>
-  <p class="alert"><%= alert %></p>
   
   <% if user_signed_in? %>
     <ul>
