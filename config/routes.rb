@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'links#index'
-  resources :links do
+  resources :links do # index new show edit update destroy
     member do
       put "like", to: "links#upvote"
       put "dislike", to: "links#downvote"
